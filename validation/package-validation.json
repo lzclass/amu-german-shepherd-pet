@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "version": "1.1.0",
+  "sha256": "01bea99cb676e2c3abd404a8320d8bc4c4c36781320c3b782af4971b609a5071",
+  "checks": [
+    "atlas matches local installation",
+    "all standard preview cells match final atlas",
+    "zip includes correct manifest, atlas and version",
+    "installer fresh install",
+    "installer no-write same-version repeat",
+    "installer preserves prior version in backup",
+    "unrelated pet preserved",
+    "README links resolve"
+  ]
+}

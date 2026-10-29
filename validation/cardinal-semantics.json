@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "directions": [
+    {
+      "label": "000",
+      "verdict": "pass",
+      "evidence": "Frontal raised nose, chin underside visible, pupils toward top; torso stays frontal."
+    },
+    {
+      "label": "090",
+      "verdict": "pass",
+      "evidence": "Muzzle and nose protrude screen right in clear head profile, frontal planted paws."
+    },
+    {
+      "label": "180",
+      "verdict": "pass",
+      "evidence": "Bowed forehead and nose aim down toward central paws, eyes looking down."
+    },
+    {
+      "label": "270",
+      "verdict": "pass",
+      "evidence": "Head profile and muzzle protrude screen left while chest and paws stay frontal."
+    }
+  ],
+  "review": "Viewed generated source and extracted 192x208 cardinal strip. Identity, physical eyes and attached collar retained; no body turntable or clipped part."
+}

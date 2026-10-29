@@ -26,90 +26,90 @@
       "frames": [
         {
           "index": 0,
-          "file": "local-artifacts/00.png",
+          "file": "previews/frames/idle/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14234,
+          "nontransparent_pixels": 11445,
           "bbox": [
-            41,
-            6,
-            150,
-            203
+            45,
+            33,
+            147,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "local-artifacts/01.png",
+          "file": "previews/frames/idle/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14537,
+          "nontransparent_pixels": 11444,
           "bbox": [
-            41,
-            5,
-            150,
-            203
+            46,
+            33,
+            146,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "local-artifacts/02.png",
+          "file": "previews/frames/idle/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14182,
+          "nontransparent_pixels": 11354,
           "bbox": [
-            41,
-            6,
-            150,
-            203
+            46,
+            33,
+            146,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "local-artifacts/03.png",
+          "file": "previews/frames/idle/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14022,
+          "nontransparent_pixels": 11546,
           "bbox": [
-            41,
-            7,
-            150,
-            203
+            45,
+            33,
+            147,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "local-artifacts/04.png",
+          "file": "previews/frames/idle/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14089,
+          "nontransparent_pixels": 11797,
           "bbox": [
-            41,
-            6,
-            150,
-            203
+            43,
+            33,
+            149,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "local-artifacts/05.png",
+          "file": "previews/frames/idle/05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14097,
+          "nontransparent_pixels": 11321,
           "bbox": [
-            41,
-            6,
-            150,
-            203
+            46,
+            33,
+            145,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
@@ -127,120 +127,120 @@
       "frames": [
         {
           "index": 0,
-          "file": "local-artifacts/00.png",
+          "file": "previews/frames/running-right/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 15527,
+          "nontransparent_pixels": 10274,
           "bbox": [
-            7,
-            22,
-            184,
-            185
+            27,
+            71,
+            165,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "local-artifacts/01.png",
+          "file": "previews/frames/running-right/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13657,
+          "nontransparent_pixels": 10259,
           "bbox": [
-            15,
-            23,
-            176,
-            185
+            26,
+            72,
+            166,
+            204
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "local-artifacts/02.png",
+          "file": "previews/frames/running-right/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13480,
+          "nontransparent_pixels": 9432,
           "bbox": [
-            12,
-            23,
-            179,
-            185
+            30,
+            73,
+            161,
+            204
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+          "chroma_adjacent_pixels": 2
         },
         {
           "index": 3,
-          "file": "local-artifacts/03.png",
+          "file": "previews/frames/running-right/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13591,
+          "nontransparent_pixels": 9965,
           "bbox": [
-            5,
-            22,
-            187,
-            169
+            17,
+            71,
+            175,
+            188
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "local-artifacts/04.png",
+          "file": "previews/frames/running-right/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13826,
+          "nontransparent_pixels": 9628,
           "bbox": [
-            15,
-            23,
-            176,
-            185
+            30,
+            73,
+            162,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "local-artifacts/05.png",
+          "file": "previews/frames/running-right/05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13175,
+          "nontransparent_pixels": 10017,
           "bbox": [
-            13,
-            23,
-            179,
-            176
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 6
-        },
-        {
-          "index": 6,
-          "file": "local-artifacts/06.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 14660,
-          "bbox": [
-            7,
-            23,
-            184,
-            181
+            26,
+            72,
+            166,
+            203
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
-          "index": 7,
-          "file": "local-artifacts/07.png",
+          "index": 6,
+          "file": "previews/frames/running-right/06.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14068,
+          "nontransparent_pixels": 9691,
           "bbox": [
-            12,
-            23,
-            180,
-            184
+            28,
+            71,
+            163,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 10
+        },
+        {
+          "index": 7,
+          "file": "previews/frames/running-right/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9754,
+          "bbox": [
+            30,
+            73,
+            162,
+            205
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
@@ -258,123 +258,123 @@
       "frames": [
         {
           "index": 0,
-          "file": "local-artifacts/00.png",
+          "file": "previews/frames/running-left/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 15516,
+          "nontransparent_pixels": 10118,
           "bbox": [
-            7,
-            22,
-            184,
-            185
+            28,
+            73,
+            164,
+            207
           ],
-          "edge_pixels": 0,
+          "edge_pixels": 8,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "local-artifacts/01.png",
+          "file": "previews/frames/running-left/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13666,
+          "nontransparent_pixels": 10095,
           "bbox": [
-            15,
-            23,
-            176,
-            185
+            26,
+            73,
+            166,
+            204
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "local-artifacts/02.png",
+          "file": "previews/frames/running-left/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13473,
+          "nontransparent_pixels": 9219,
           "bbox": [
-            12,
-            23,
-            179,
-            185
+            31,
+            75,
+            161,
+            204
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+          "chroma_adjacent_pixels": 2
         },
         {
           "index": 3,
-          "file": "local-artifacts/03.png",
+          "file": "previews/frames/running-left/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13591,
+          "nontransparent_pixels": 9755,
           "bbox": [
-            5,
-            22,
-            187,
-            169
+            18,
+            73,
+            174,
+            189
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+          "chroma_adjacent_pixels": 2
         },
         {
           "index": 4,
-          "file": "local-artifacts/04.png",
+          "file": "previews/frames/running-left/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13807,
+          "nontransparent_pixels": 9409,
           "bbox": [
-            15,
-            23,
-            176,
-            185
+            30,
+            74,
+            161,
+            207
           ],
-          "edge_pixels": 0,
+          "edge_pixels": 2,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "local-artifacts/05.png",
+          "file": "previews/frames/running-left/05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13175,
+          "nontransparent_pixels": 9785,
           "bbox": [
-            13,
-            23,
-            179,
-            176
+            26,
+            74,
+            166,
+            203
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 6
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 6,
-          "file": "local-artifacts/06.png",
+          "file": "previews/frames/running-left/06.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14676,
+          "nontransparent_pixels": 9515,
           "bbox": [
-            7,
-            23,
-            184,
-            181
+            29,
+            73,
+            162,
+            204
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 7,
-          "file": "local-artifacts/07.png",
+          "file": "previews/frames/running-left/07.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14068,
+          "nontransparent_pixels": 9507,
           "bbox": [
-            12,
-            23,
-            180,
-            184
+            30,
+            74,
+            162,
+            205
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+          "chroma_adjacent_pixels": 1
         }
       ]
     },
@@ -389,63 +389,63 @@
       "frames": [
         {
           "index": 0,
-          "file": "local-artifacts/00.png",
+          "file": "previews/frames/waving/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 15505,
+          "nontransparent_pixels": 11504,
           "bbox": [
+            45,
             33,
-            5,
-            159,
-            203
+            147,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 70
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "local-artifacts/01.png",
+          "file": "previews/frames/waving/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 15577,
+          "nontransparent_pixels": 11376,
           "bbox": [
-            34,
-            5,
-            158,
-            203
+            44,
+            33,
+            148,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 72
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "local-artifacts/02.png",
+          "file": "previews/frames/waving/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 15517,
+          "nontransparent_pixels": 11760,
           "bbox": [
+            43,
             33,
-            6,
-            159,
-            203
+            149,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 73
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "local-artifacts/03.png",
+          "file": "previews/frames/waving/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 15536,
+          "nontransparent_pixels": 11307,
           "bbox": [
+            44,
             33,
-            5,
-            159,
-            203
+            148,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 85
+          "chroma_adjacent_pixels": 0
         }
       ]
     },
@@ -460,78 +460,78 @@
       "frames": [
         {
           "index": 0,
-          "file": "local-artifacts/00.png",
+          "file": "previews/frames/jumping/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13915,
+          "nontransparent_pixels": 12375,
           "bbox": [
-            41,
-            11,
-            151,
-            203
+            43,
+            32,
+            148,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "local-artifacts/01.png",
+          "file": "previews/frames/jumping/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 11941,
+          "nontransparent_pixels": 11760,
           "bbox": [
-            42,
-            11,
-            150,
-            184
+            43,
+            43,
+            149,
+            202
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "local-artifacts/02.png",
+          "file": "previews/frames/jumping/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 10717,
+          "nontransparent_pixels": 9955,
           "bbox": [
-            43,
-            5,
-            149,
-            165
+            50,
+            26,
+            141,
+            180
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 2
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "local-artifacts/03.png",
+          "file": "previews/frames/jumping/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 11278,
+          "nontransparent_pixels": 11742,
           "bbox": [
             43,
-            11,
+            44,
             149,
-            177
+            202
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "local-artifacts/04.png",
+          "file": "previews/frames/jumping/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13842,
+          "nontransparent_pixels": 12369,
           "bbox": [
-            41,
-            11,
-            151,
-            203
+            43,
+            32,
+            148,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 0
+          "chroma_adjacent_pixels": 1
         }
       ]
     },
@@ -546,123 +546,123 @@
       "frames": [
         {
           "index": 0,
-          "file": "local-artifacts/00.png",
+          "file": "previews/frames/failed/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 18505,
+          "nontransparent_pixels": 11452,
           "bbox": [
-            28,
-            5,
-            163,
-            203
+            48,
+            33,
+            144,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "local-artifacts/01.png",
+          "file": "previews/frames/failed/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 17946,
+          "nontransparent_pixels": 10892,
           "bbox": [
-            28,
-            9,
-            163,
-            203
+            49,
+            36,
+            143,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "local-artifacts/02.png",
+          "file": "previews/frames/failed/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 17252,
+          "nontransparent_pixels": 10286,
           "bbox": [
-            28,
-            19,
-            163,
-            203
+            48,
+            60,
+            144,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "local-artifacts/03.png",
+          "file": "previews/frames/failed/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 16420,
+          "nontransparent_pixels": 10005,
           "bbox": [
-            28,
-            32,
-            163,
-            203
+            49,
+            60,
+            143,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "local-artifacts/04.png",
+          "file": "previews/frames/failed/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 16611,
+          "nontransparent_pixels": 10323,
           "bbox": [
-            28,
-            30,
-            163,
-            203
+            45,
+            61,
+            147,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "local-artifacts/05.png",
+          "file": "previews/frames/failed/05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 17341,
+          "nontransparent_pixels": 10397,
           "bbox": [
-            28,
-            19,
-            163,
-            203
+            46,
+            53,
+            146,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 6,
-          "file": "local-artifacts/06.png",
+          "file": "previews/frames/failed/06.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 18070,
+          "nontransparent_pixels": 10973,
           "bbox": [
-            28,
-            8,
-            163,
-            203
+            49,
+            38,
+            143,
+            206
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 7,
-          "file": "local-artifacts/07.png",
+          "file": "previews/frames/failed/07.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 18033,
+          "nontransparent_pixels": 11299,
           "bbox": [
-            30,
-            5,
-            162,
-            203
+            49,
+            32,
+            143,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 3
+          "chroma_adjacent_pixels": 0
         }
       ]
     },
@@ -677,93 +677,93 @@
       "frames": [
         {
           "index": 0,
-          "file": "local-artifacts/00.png",
+          "file": "previews/frames/waiting/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14654,
+          "nontransparent_pixels": 11522,
           "bbox": [
-            39,
-            5,
-            152,
-            203
+            45,
+            32,
+            146,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 77
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "local-artifacts/01.png",
+          "file": "previews/frames/waiting/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14680,
+          "nontransparent_pixels": 11310,
           "bbox": [
-            39,
-            5,
-            152,
-            203
+            45,
+            28,
+            146,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 70
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "local-artifacts/02.png",
+          "file": "previews/frames/waiting/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14689,
+          "nontransparent_pixels": 11447,
           "bbox": [
-            39,
-            5,
-            152,
-            203
+            43,
+            26,
+            148,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 83
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "local-artifacts/03.png",
+          "file": "previews/frames/waiting/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14716,
+          "nontransparent_pixels": 11637,
           "bbox": [
-            39,
-            5,
-            152,
-            203
+            43,
+            24,
+            148,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 75
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "local-artifacts/04.png",
+          "file": "previews/frames/waiting/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14702,
+          "nontransparent_pixels": 11310,
           "bbox": [
-            39,
-            5,
-            152,
-            203
+            44,
+            30,
+            146,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 85
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "local-artifacts/05.png",
+          "file": "previews/frames/waiting/05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14435,
+          "nontransparent_pixels": 11374,
           "bbox": [
-            40,
-            5,
-            151,
-            203
+            46,
+            32,
+            145,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 70
+          "chroma_adjacent_pixels": 0
         }
       ]
     },
@@ -778,93 +778,93 @@
       "frames": [
         {
           "index": 0,
-          "file": "local-artifacts/00.png",
+          "file": "previews/frames/running/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 18361,
+          "nontransparent_pixels": 11538,
           "bbox": [
-            27,
-            5,
-            164,
-            203
+            45,
+            33,
+            145,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 147
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "local-artifacts/01.png",
+          "file": "previews/frames/running/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 18140,
+          "nontransparent_pixels": 11393,
           "bbox": [
-            27,
-            11,
-            164,
-            203
+            46,
+            35,
+            144,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 121
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "local-artifacts/02.png",
+          "file": "previews/frames/running/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 17416,
+          "nontransparent_pixels": 10778,
           "bbox": [
-            27,
-            21,
-            164,
-            203
+            44,
+            51,
+            146,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 136
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "local-artifacts/03.png",
+          "file": "previews/frames/running/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 17202,
+          "nontransparent_pixels": 10980,
           "bbox": [
-            27,
-            25,
-            164,
-            203
+            44,
+            51,
+            146,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 116
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "local-artifacts/04.png",
+          "file": "previews/frames/running/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 18166,
+          "nontransparent_pixels": 11432,
           "bbox": [
-            27,
-            10,
-            164,
-            203
+            46,
+            32,
+            144,
+            207
           ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 141
+          "edge_pixels": 12,
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "local-artifacts/05.png",
+          "file": "previews/frames/running/05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 18175,
+          "nontransparent_pixels": 11397,
           "bbox": [
-            27,
-            5,
-            164,
-            203
+            46,
+            33,
+            144,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 142
+          "chroma_adjacent_pixels": 0
         }
       ]
     },
@@ -879,93 +879,93 @@
       "frames": [
         {
           "index": 0,
-          "file": "local-artifacts/00.png",
+          "file": "previews/frames/review/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 16642,
+          "nontransparent_pixels": 12046,
           "bbox": [
-            32,
-            5,
-            159,
-            203
+            43,
+            33,
+            149,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 100
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "local-artifacts/01.png",
+          "file": "previews/frames/review/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 17018,
+          "nontransparent_pixels": 12003,
           "bbox": [
-            32,
-            5,
-            159,
-            203
+            44,
+            34,
+            148,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 108
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "local-artifacts/02.png",
+          "file": "previews/frames/review/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 16770,
+          "nontransparent_pixels": 11798,
           "bbox": [
-            32,
-            9,
-            159,
-            203
+            43,
+            38,
+            149,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 96
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "local-artifacts/03.png",
+          "file": "previews/frames/review/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 16413,
+          "nontransparent_pixels": 11986,
           "bbox": [
-            32,
-            17,
-            159,
-            203
+            43,
+            34,
+            149,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 103
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "local-artifacts/04.png",
+          "file": "previews/frames/review/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 17028,
+          "nontransparent_pixels": 11976,
           "bbox": [
-            32,
-            5,
-            159,
-            203
+            44,
+            33,
+            148,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 111
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "local-artifacts/05.png",
+          "file": "previews/frames/review/05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 16637,
+          "nontransparent_pixels": 11912,
           "bbox": [
-            32,
-            5,
-            159,
-            203
+            44,
+            33,
+            147,
+            206
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 103
+          "chroma_adjacent_pixels": 0
         }
       ]
     }

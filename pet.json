@@ -1,9 +1,9 @@
 {
   "name": "阿牧",
   "name_en": "Amu",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
-  "description": "动作柔和、机警亲人的德牧动画宠物",
+  "description": "动作柔和、会歪头邀玩与嗅探的 3D 德牧伙伴",
   "spritesheet": "assets/spritesheet.png",
   "sprite_version": 2,
   "width": 1536,
@@ -146,5 +146,9 @@
       "315",
       "337.5"
     ]
-  }
+  },
+  "art_style": "3D plush rendered sprite",
+  "sha256": "01bea99cb676e2c3abd404a8320d8bc4c4c36781320c3b782af4971b609a5071",
+  "local_package": "packages/amu",
+  "local_installer": "scripts/install.py"
 }

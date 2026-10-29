@@ -2,87 +2,87 @@
   "pairs": [
     {
       "pair": "horizontal-1",
-      "A": "ambiguous",
-      "B": "screen-right",
-      "reason": "A is nearly frontal with raised muzzle and both eyes visible; B clearly projects its muzzle toward screen-right."
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A muzzle and gaze extend right; B muzzle and gaze extend left."
     },
     {
       "pair": "horizontal-2",
-      "A": "screen-left",
-      "B": "screen-right",
-      "reason": "A's nose projects left of its eyes; B's nose projects right, with corresponding sideward eye direction."
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A nose projects right of the face; B nose projects left."
     },
     {
       "pair": "horizontal-3",
       "A": "screen-left",
       "B": "screen-right",
-      "reason": "A has a left-facing muzzle and gaze; B has a right-facing muzzle and gaze."
+      "reason": "A shows a left-pointing muzzle and eyes; B shows a right-pointing muzzle and eyes."
     },
     {
       "pair": "horizontal-4",
-      "A": "screen-left",
-      "B": "screen-right",
-      "reason": "A's long muzzle points left; B's muzzle and visible eye point right."
+      "A": "screen-right",
+      "B": "screen-left",
+      "reason": "A head and nose turn right; B head and nose turn left."
     },
     {
       "pair": "horizontal-5",
       "A": "screen-right",
       "B": "screen-left",
-      "reason": "A's nose extends to the right; B's nose and eye face left."
+      "reason": "Both heads dip slightly, with A muzzle pointing right and B muzzle pointing left."
     },
     {
       "pair": "horizontal-6",
-      "A": "screen-right",
-      "B": "screen-left",
-      "reason": "Both heads dip, but A's muzzle projects right and B's projects left."
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A lowered muzzle and gaze point left; B lowered muzzle and gaze point right."
     },
     {
       "pair": "horizontal-7",
       "A": "screen-left",
       "B": "screen-right",
-      "reason": "A's lowered muzzle points left; B's lowered muzzle points right."
+      "reason": "A head turns down toward the left; B head turns down toward the right."
     },
     {
       "pair": "vertical-1",
       "A": "down",
       "B": "up",
-      "reason": "A bows its head with nose below the eyes and gaze lowered; B lifts its nose and chin with an upward gaze."
+      "reason": "A lowers its nose and eyes toward its chest; B raises its muzzle, showing the mouth underside."
     },
     {
       "pair": "vertical-2",
       "A": "down",
       "B": "up",
-      "reason": "A sharply dips the muzzle beneath the eye; B raises the muzzle and looks upward."
+      "reason": "A has a dipped head and downward gaze; B lifts its nose and eyes above level."
     },
     {
       "pair": "vertical-3",
-      "A": "down",
-      "B": "up",
-      "reason": "A tilts its forehead and nose downward; B holds its chin up with eyes directed above."
+      "A": "up",
+      "B": "down",
+      "reason": "A raises its muzzle and gaze; B tucks its muzzle down and looks toward the floor."
     },
     {
       "pair": "vertical-4",
-      "A": "down",
-      "B": "up",
-      "reason": "A shows a mild downward head tilt with nose below the eye line; B raises its muzzle and gaze."
+      "A": "up",
+      "B": "down",
+      "reason": "A nose points upward with elevated eyes; B muzzle and eyes angle downward."
     },
     {
       "pair": "vertical-5",
-      "A": "down",
-      "B": "up",
-      "reason": "A's nose is lowered and gaze directed down; B's upturned nose and exposed chin show an upward tilt."
+      "A": "up",
+      "B": "down",
+      "reason": "A tips its snout upward, exposing the lower muzzle; B lowers its snout and gaze."
     },
     {
       "pair": "vertical-6",
-      "A": "up",
-      "B": "down",
-      "reason": "A elevates the muzzle and looks above; B lowers the nose with a bowed head and downward gaze."
+      "A": "down",
+      "B": "up",
+      "reason": "A muzzle dips below its eye line; B nose and gaze rise with the head tilted back."
     },
     {
       "pair": "vertical-7",
       "A": "down",
       "B": "up",
-      "reason": "A's muzzle angles below its eye with a lowered head; B raises its muzzle toward the upper left and looks upward."
+      "reason": "A nose and eyes angle downward to the left; B raises its snout and eyes to the left."
     }
   ]
 }

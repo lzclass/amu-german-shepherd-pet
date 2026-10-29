@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "method": "One row-wide constant scale and translation based on same neutral pose; full source displacements preserved. Gait width matches prior accepted profile width. No per-frame rescaling or grounding.",
+  "target_neutral_height": 169,
+  "rows": [
+    {
+      "state": "idle",
+      "scale": 0.8622448979591837,
+      "offset": [
+        13,
+        30
+      ],
+      "source_first_bbox": [
+        40,
+        6,
+        152,
+        202
+      ],
+      "target_ground": 203
+    },
+    {
+      "state": "running-right",
+      "scale": 0.8651685393258427,
+      "offset": [
+        13,
+        49
+      ],
+      "source_first_bbox": [
+        19,
+        28,
+        173,
+        179
+      ],
+      "target_ground": 203
+    },
+    {
+      "state": "running-left",
+      "scale": 0.8539325842696629,
+      "offset": [
+        14,
+        51
+      ],
+      "source_first_bbox": [
+        19,
+        28,
+        173,
+        179
+      ],
+      "target_ground": 203
+    },
+    {
+      "state": "waving",
+      "scale": 0.8622448979591837,
+      "offset": [
+        13,
+        30
+      ],
+      "source_first_bbox": [
+        40,
+        6,
+        152,
+        202
+      ],
+      "target_ground": 203
+    },
+    {
+      "state": "jumping",
+      "scale": 0.8941798941798942,
+      "offset": [
+        10,
+        23
+      ],
+      "source_first_bbox": [
+        39,
+        13,
+        152,
+        202
+      ],
+      "target_ground": 203
+    },
+    {
+      "state": "failed",
+      "scale": 0.8666666666666667,
+      "offset": [
+        13,
+        29
+      ],
+      "source_first_bbox": [
+        43,
+        7,
+        149,
+        202
+      ],
+      "target_ground": 203
+    },
+    {
+      "state": "waiting",
+      "scale": 0.9037433155080213,
+      "offset": [
+        9,
+        21
+      ],
+      "source_first_bbox": [
+        42,
+        15,
+        149,
+        202
+      ],
+      "target_ground": 203
+    },
+    {
+      "state": "running",
+      "scale": 0.8711340206185567,
+      "offset": [
+        12,
+        29
+      ],
+      "source_first_bbox": [
+        41,
+        7,
+        150,
+        201
+      ],
+      "target_ground": 203
+    },
+    {
+      "state": "review",
+      "scale": 0.8622448979591837,
+      "offset": [
+        13,
+        30
+      ],
+      "source_first_bbox": [
+        38,
+        6,
+        154,
+        202
+      ],
+      "target_ground": 203
+    }
+  ]
+}
