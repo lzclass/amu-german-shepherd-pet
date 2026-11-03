@@ -16,7 +16,7 @@ NAMES = ('pet.json', 'spritesheet.png', 'version.json')
 
 def files_under(path):
     return {
-        str(item.relative_to(path)): item.read_bytes()
+        str(item.relative_to(path)): (item.read_bytes(), item.stat().st_mtime_ns)
         for item in sorted(path.rglob('*'))
         if item.is_file()
     }
