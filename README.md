@@ -17,15 +17,29 @@ Version **1.1.0** — a 3D plush German Shepherd companion with nine animation s
 └── version.json
 ```
 
-已克隆仓库时，也可以运行：
+已克隆仓库时，先预览安装计划，再执行安装：
 
 ```bash
+# 校验安装包并显示安装位置、版本和计划，不写入任何文件
+python3 scripts/install.py --dry-run
+
+# 确认后实际安装
 python3 scripts/install.py
 ```
+
+预览会显示目标路径、版本，以及首次安装、已安装一致或需要更新的计划；更新时还会提示备份目录。预览不会创建安装目录、父目录、临时目录或备份，也不会修改现有文件；安装包校验失败时会直接退出。
 
 安装脚本只使用 Python 标准库，支持 `CODEX_HOME`，会在更新现有本地版本前备份原文件。相同版本重复安装不会写入文件。安装后在 **设置 → 宠物 → 刷新** 中选择阿牧。脚本不修改全局配置或账号设置。
 
 根目录 `pet.json` 记录布局、版本和帧时长；[packages/amu/pet.json](packages/amu/pet.json) 是桌面应用使用的安装清单。[官方宠物说明](https://learn.chatgpt.com/docs/pets) 介绍了刷新和选择入口，具体可用能力取决于客户端版本。
+
+## 测试
+
+安装脚本的回归测试只依赖 Python 标准库，并在隔离的临时目录中运行，不会访问或改动 `~/.codex/pets`：
+
+```bash
+python3 -m unittest discover -s tests -v
+```
 
 ## 预览与素材
 
@@ -58,7 +72,8 @@ assets/spritesheet.png   最终透明图集
 assets/source/           3D 角色基准、动作条和方向条
 assets/source/original/  当前动作的原始生成条带
 packages/amu/           本地安装文件
-scripts/install.py      本地安装及备份脚本
+scripts/install.py      本地安装、预览及备份脚本
+tests/                  安装脚本回归测试
 previews/               GIF、MP4、静帧和动作表
 prompts/natural/        当前 3D 版生成及修正提示词
 validation/             去除本机路径的验证记录
