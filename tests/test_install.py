@@ -46,6 +46,56 @@ class InstallScriptTests(unittest.TestCase):
             'sha256': hashlib.sha256(sprite).hexdigest(),
         }), encoding='utf-8')
 
+    def write_metadata(self, pet_text, version_text):
+        (self.package / 'pet.json').write_text(pet_text, encoding='utf-8')
+        (self.package / 'version.json').write_text(version_text, encoding='utf-8')
+
+    def invalid_metadata_cases(self):
+        """Return (label, pet.json text, version.json text, expected error fragment)."""
+        digest = hashlib.sha256((self.package / 'spritesheet.png').read_bytes()).hexdigest()
+        valid_pet = json.dumps({'spritesheetPath': 'spritesheet.png'})
+        valid_version = json.dumps({'version': '1.0.0', 'sha256': digest})
+        return [
+            ('pet_json_syntax', '{not json', valid_version,
+             'pet.json is not valid JSON'),
+            ('pet_json_array', '[]', valid_version,
+             'pet.json must contain a JSON object'),
+            ('pet_missing_spritesheet_path', '{}', valid_version,
+             'pet.json spritesheetPath'),
+            ('pet_non_string_spritesheet_path', json.dumps({'spritesheetPath': 1}), valid_version,
+             'pet.json spritesheetPath'),
+            ('pet_absolute_spritesheet_path',
+             json.dumps({'spritesheetPath': str(self.package / 'spritesheet.png')}), valid_version,
+             'pet.json spritesheetPath'),
+            ('pet_parent_spritesheet_path', json.dumps({'spritesheetPath': '../spritesheet.png'}),
+             valid_version, 'pet.json spritesheetPath'),
+            ('pet_other_spritesheet_path', json.dumps({'spritesheetPath': 'other.png'}),
+             valid_version, 'pet.json spritesheetPath'),
+            ('version_json_syntax', valid_pet, '{not json',
+             'version.json is not valid JSON'),
+            ('version_json_array', valid_pet, '[]',
+             'version.json must contain a JSON object'),
+            ('version_missing_version', valid_pet, json.dumps({'sha256': digest}),
+             'version.json version must be a non-empty string'),
+            ('version_empty_version', valid_pet,
+             json.dumps({'version': '', 'sha256': digest}),
+             'version.json version must be a non-empty string'),
+            ('version_non_string_version', valid_pet,
+             json.dumps({'version': 1.0, 'sha256': digest}),
+             'version.json version must be a non-empty string'),
+            ('version_missing_sha256', valid_pet, json.dumps({'version': '1.0.0'}),
+             'version.json sha256 must be a 64-character hexadecimal string'),
+            ('version_short_sha256', valid_pet,
+             json.dumps({'version': '1.0.0', 'sha256': 'abc'}),
+             'version.json sha256 must be a 64-character hexadecimal string'),
+            ('version_non_hex_sha256', valid_pet,
+             json.dumps({'version': '1.0.0', 'sha256': 'z' * 64}),
+             'version.json sha256 must be a 64-character hexadecimal string'),
+            ('version_non_string_sha256', valid_pet,
+             json.dumps({'version': '1.0.0', 'sha256': 123}),
+             'version.json sha256 must be a 64-character hexadecimal string'),
+        ]
+
     def run_install(self, *args):
         env = os.environ.copy()
         env.pop('CODEX_HOME', None)
@@ -56,6 +106,11 @@ class InstallScriptTests(unittest.TestCase):
 
     def assert_success(self, result):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def assert_metadata_error(self, result, fragment):
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertNotIn('Traceback', result.stderr)
+        self.assertIn(fragment, result.stderr)
 
     def test_dry_run_first_install_reports_plan_without_writing(self):
         result = self.run_install('--dry-run')
@@ -139,6 +194,58 @@ class InstallScriptTests(unittest.TestCase):
             json.loads((backups[0] / 'version.json').read_text(encoding='utf-8'))['version'],
             '1.0.0',
         )
+
+    def test_uppercase_sha256_metadata_installs(self):
+        digest = hashlib.sha256((self.package / 'spritesheet.png').read_bytes()).hexdigest().upper()
+        (self.package / 'version.json').write_text(json.dumps({
+            'version': '1.0.0',
+            'sha256': digest,
+        }), encoding='utf-8')
+        result = self.run_install()
+        self.assert_success(result)
+        self.assertIn('Installed Amu 1.0.0:', result.stdout)
+        for name in NAMES:
+            self.assertEqual((self.target / name).read_bytes(), (self.package / name).read_bytes())
+
+    def test_invalid_metadata_dry_run_rejected_without_creating_target(self):
+        for label, pet_text, version_text, fragment in self.invalid_metadata_cases():
+            with self.subTest(case=label):
+                self.write_metadata(pet_text, version_text)
+                result = self.run_install('--dry-run')
+                self.assert_metadata_error(result, fragment)
+                self.assertFalse(self.pets.parent.exists())
+                self.assertFalse(self.backup_root.exists())
+
+    def test_invalid_metadata_normal_install_rejected_without_creating_target(self):
+        for label, pet_text, version_text, fragment in self.invalid_metadata_cases():
+            with self.subTest(case=label):
+                self.write_metadata(pet_text, version_text)
+                result = self.run_install()
+                self.assert_metadata_error(result, fragment)
+                self.assertFalse(self.pets.parent.exists())
+                self.assertFalse(self.backup_root.exists())
+
+    def test_invalid_metadata_dry_run_keeps_existing_install(self):
+        self.assert_success(self.run_install())
+        before = files_under(self.pets)
+        for label, pet_text, version_text, fragment in self.invalid_metadata_cases():
+            with self.subTest(case=label):
+                self.write_metadata(pet_text, version_text)
+                result = self.run_install('--dry-run')
+                self.assert_metadata_error(result, fragment)
+                self.assertEqual(files_under(self.pets), before)
+                self.assertFalse(self.backup_root.exists())
+
+    def test_invalid_metadata_normal_install_keeps_existing_install(self):
+        self.assert_success(self.run_install())
+        before = files_under(self.pets)
+        for label, pet_text, version_text, fragment in self.invalid_metadata_cases():
+            with self.subTest(case=label):
+                self.write_metadata(pet_text, version_text)
+                result = self.run_install()
+                self.assert_metadata_error(result, fragment)
+                self.assertEqual(files_under(self.pets), before)
+                self.assertFalse(self.backup_root.exists())
 
 
 if __name__ == '__main__':

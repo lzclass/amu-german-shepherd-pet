@@ -4,12 +4,54 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import shutil
 import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
 NAMES = ('pet.json', 'spritesheet.png', 'version.json')
+SPRITESHEET = 'spritesheet.png'
+SHA256_PATTERN = re.compile(r'[0-9a-fA-F]{64}')
+
+
+def metadata_error(message):
+    raise SystemExit(f'Invalid package metadata: {message}; installation stopped.')
+
+
+def load_json_object(source, name):
+    path = source / name
+    try:
+        text = path.read_text(encoding='utf-8')
+    except (OSError, UnicodeDecodeError) as error:
+        metadata_error(f'{name} cannot be read: {error}')
+    try:
+        data = json.loads(text)
+    except json.JSONDecodeError as error:
+        metadata_error(f'{name} is not valid JSON: {error.msg} (line {error.lineno}, column {error.colno})')
+    if not isinstance(data, dict):
+        metadata_error(f'{name} must contain a JSON object')
+    return data
+
+
+def load_manifest(source):
+    manifest = load_json_object(source, 'pet.json')
+    if manifest.get('spritesheetPath') != SPRITESHEET:
+        metadata_error(f'pet.json spritesheetPath must be "{SPRITESHEET}" '
+                       '(absolute paths, parent paths and other file names are not supported)')
+    return manifest
+
+
+def load_version(source):
+    version = load_json_object(source, 'version.json')
+    value = version.get('version')
+    if not isinstance(value, str) or not value.strip():
+        metadata_error('version.json version must be a non-empty string')
+    digest = version.get('sha256')
+    if not isinstance(digest, str) or SHA256_PATTERN.fullmatch(digest) is None:
+        metadata_error('version.json sha256 must be a 64-character hexadecimal string')
+    version['sha256'] = digest.lower()
+    return version
 
 
 def main():
@@ -22,8 +64,8 @@ def main():
     for name in NAMES:
         if not (source / name).is_file():
             raise SystemExit(f'Package file missing: {name}; installation stopped.')
-    manifest = json.loads((source / 'pet.json').read_text(encoding='utf-8'))
-    version = json.loads((source / 'version.json').read_text(encoding='utf-8'))
+    manifest = load_manifest(source)
+    version = load_version(source)
     sprite = source / manifest['spritesheetPath']
     expected = version['sha256']
     if hashlib.sha256(sprite.read_bytes()).hexdigest() != expected:
