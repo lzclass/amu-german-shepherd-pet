@@ -41,6 +41,17 @@ python3 scripts/install.py
 python3 -m unittest discover -s tests -v
 ```
 
+## 持续集成
+
+[GitHub Actions CI](.github/workflows/ci.yml) 在面向 `main` 的 pull request、推送到 `main` 以及手动触发（workflow_dispatch）时运行。工作流只读取仓库内容，在 ubuntu-latest 与 Python 3.12 上确认解释器版本，然后运行回归测试和 `SHA256SUMS` 校验；任一步失败都会让工作流失败。
+
+对应的本地命令：
+
+```bash
+python3 -m unittest discover -s tests -v
+sha256sum --strict --check SHA256SUMS
+```
+
 ## 预览与素材
 
 - [透明精灵图](assets/spritesheet.png)：1536 × 2288 PNG，v2 布局，73 个有效帧。
