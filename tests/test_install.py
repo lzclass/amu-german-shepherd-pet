@@ -144,6 +144,67 @@ class InstallScriptTests(unittest.TestCase):
         self.assertEqual(files_under(self.pets), before)
         self.assertFalse(self.backup_root.exists())
 
+    def test_json_dry_run_first_install_reports_plan_without_writing(self):
+        result = self.run_install('--dry-run', '--json')
+        self.assert_success(result)
+        plan = json.loads(result.stdout)
+        self.assertEqual(plan['version'], '1.0.0')
+        self.assertEqual(plan['target'], str(self.target))
+        self.assertEqual(plan['action'], 'first_install')
+        self.assertIsNone(plan['backup_dir'])
+        self.assertIs(plan['dry_run'], True)
+        self.assertFalse(self.pets.exists())
+        self.assertFalse(self.pets.parent.exists())
+        self.assertFalse(self.backup_root.exists())
+
+    def test_json_dry_run_already_installed_reports_plan_without_writing(self):
+        self.assert_success(self.run_install())
+        before = files_under(self.pets)
+        result = self.run_install('--dry-run', '--json')
+        self.assert_success(result)
+        plan = json.loads(result.stdout)
+        self.assertEqual(plan['version'], '1.0.0')
+        self.assertEqual(plan['target'], str(self.target))
+        self.assertEqual(plan['action'], 'up_to_date')
+        self.assertIsNone(plan['backup_dir'])
+        self.assertIs(plan['dry_run'], True)
+        self.assertEqual(files_under(self.pets), before)
+        self.assertFalse(self.backup_root.exists())
+
+    def test_json_dry_run_update_reports_plan_without_writing(self):
+        self.assert_success(self.run_install())
+        before = files_under(self.pets)
+        self.write_package('2.0.0', b'amu sprite 2.0.0')
+        result = self.run_install('--dry-run', '--json')
+        self.assert_success(result)
+        plan = json.loads(result.stdout)
+        self.assertEqual(plan['version'], '2.0.0')
+        self.assertEqual(plan['target'], str(self.target))
+        self.assertEqual(plan['action'], 'update')
+        self.assertEqual(plan['backup_dir'], str(self.backup_root))
+        self.assertIs(plan['dry_run'], True)
+        self.assertEqual(files_under(self.pets), before)
+        self.assertFalse(self.backup_root.exists())
+
+    def test_json_without_dry_run_is_usage_error_and_installs_nothing(self):
+        result = self.run_install('--json')
+        self.assertNotEqual(result.returncode, 0)
+        self.assertNotIn('Traceback', result.stderr)
+        self.assertIn('--json', result.stderr)
+        self.assertIn('--dry-run', result.stderr)
+        self.assertEqual(result.stdout, '')
+        self.assertFalse(self.pets.exists())
+        self.assertFalse(self.pets.parent.exists())
+        self.assertFalse(self.backup_root.exists())
+
+    def test_json_dry_run_rejects_invalid_metadata_without_output(self):
+        self.write_metadata('{not json', json.dumps({'version': '1.0.0', 'sha256': '0' * 64}))
+        result = self.run_install('--dry-run', '--json')
+        self.assert_metadata_error(result, 'pet.json is not valid JSON')
+        self.assertEqual(result.stdout, '')
+        self.assertFalse(self.pets.parent.exists())
+        self.assertFalse(self.backup_root.exists())
+
     def test_dry_run_rejects_corrupt_package_without_creating_target(self):
         (self.package / 'spritesheet.png').write_bytes(b'corrupt sprite')
         result = self.run_install('--dry-run')

@@ -58,8 +58,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--dry-run', action='store_true',
                         help='Preview the installation without creating or modifying any files.')
+    parser.add_argument('--json', action='store_true',
+                        help='With --dry-run, print the installation plan as a JSON object.')
     parser.add_argument('--pets-dir', type=Path, help='Override the Codex pets directory.')
     args = parser.parse_args()
+    if args.json and not args.dry_run:
+        parser.error('--json can only be used together with --dry-run')
     source = Path(__file__).resolve().parents[1] / 'packages' / 'amu'
     for name in NAMES:
         if not (source / name).is_file():
@@ -82,11 +86,26 @@ def main():
         for name in NAMES
     )
     if args.dry_run:
+        if up_to_date:
+            action = 'up_to_date'
+        elif target.exists():
+            action = 'update'
+        else:
+            action = 'first_install'
+        if args.json:
+            print(json.dumps({
+                'version': version['version'],
+                'target': str(target),
+                'action': action,
+                'backup_dir': str(pets.parent / 'pet-backups') if action == 'update' else None,
+                'dry_run': True,
+            }))
+            return
         print(f'Version: {version["version"]}')
         print(f'Target: {target}')
-        if up_to_date:
+        if action == 'up_to_date':
             print('Plan: already installed; no files will be written.')
-        elif target.exists():
+        elif action == 'update':
             print(f'Plan: update; the current installation will be backed up under {pets.parent / "pet-backups"}.')
         else:
             print('Plan: first install; the target directory will be created.')
